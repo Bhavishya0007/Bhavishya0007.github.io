@@ -9,25 +9,176 @@
 <body>
   <header>
     <h1>Bhavishya Kumar</h1>
-    <p class="tagline">Software Engineer</p>
+    <p class="tagline">Software Development Engineer</p>
+    <ul class="contact-links">
+      <li><a href="mailto:bkumar5@wisc.edu">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/bhavishya0007" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
   </header>
 
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <section>
-      <h2>About</h2>
-      <p>Welcome to my personal site. This is where I share my projects, writing, and things I'm building.</p>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Software Development Engineer with 5+ years of experience in greenfield engineering and AI-driven products.
+        Expertise in C++, Java, and Python for LLM agentic systems, real-time trading infrastructure, and security
+        observability. Proven Founding Engineer capable of building scalable, near-zero footprint distributed systems
+        from zero to one.</p>
     </section>
 
-    <section>
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Amazon — SDE 2, Founding Engineer, BuyForMe</h3>
+          <span class="entry-meta">Seattle, WA · Jan 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Owned end-to-end greenfield order tracking experience, building a high-throughput asynchronous system using SQS and AWS Lambda to process events from 500k+ merchants for real-time visibility in "Your Orders."</li>
+          <li>Spearheaded design and implementation of a deterministic BigCommerce checkout system, handling complex price/shipping validations and merchant SKU formats to achieve instantaneous checkout (70s+ reduction in latency).</li>
+          <li>Optimized LLM-powered noise-filtering pipelines for order data extraction, reducing hallucination-induced errors by 48% and improving task success rates by 30%, resulting in $137K+ in annual operational savings.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Balbix — AI/ML Founding Engineer Intern</h3>
+          <span class="entry-meta">San Jose, CA · Jun 2024 – Aug 2024</span>
+        </div>
+        <ul>
+          <li>Architected and deployed a high-performance C++ telemetry engine to capture real-time application and system-level data; optimized the agent for a near-zero CPU footprint while ensuring reliable data pipelines to the cloud.</li>
+          <li>Developed production deployment workflows for BIX (GenAI Cyber Risk Assistant), boosting efficiency by 30% and maintaining 99.9% uptime. Automated Jenkins CI/CD pipelines, cutting build time by 50% for 1,000+ devices.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>University of Wisconsin–Madison — Project Assistant</h3>
+          <span class="entry-meta">Madison, WI · Sep 2023 – Dec 2024</span>
+        </div>
+        <ul>
+          <li>Designed deterministic C++ frameworks for signal acquisition and processing (MRI imaging/digital audio); leveraged manual memory control to handle heavy mathematical computations without garbage-collection latency spikes.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>NHBT Securities — Founding Engineer, Trading Systems Product Builder</h3>
+          <span class="entry-meta">Mumbai, India · May 2023 – Aug 2023</span>
+        </div>
+        <ul>
+          <li>Scaled a full-stack trading platform, integrating real-time NSE snapshot feeds processing 2 GBPS using Go/Python multithreading; executed strategic software deals for low-latency infrastructure directly with the CEO/CTO.</li>
+          <li>Enhanced risk analytics and P&amp;L tracking GUI with Python to capture live market data for over 100 equities across three major trading platforms, processing data for 1,000+ daily trades.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Amazon — Founding Engineer (Alexa) &amp; Early Product Engineer (AWS/VAS)</h3>
+          <span class="entry-meta">Bengaluru, India · Jan 2020 – Nov 2022</span>
+        </div>
+        <ul>
+          <li>Engineered low-level synchronization logic within the Alexa Multimodal Devices using C++ to enable real-time device captioning; achieved sub-millisecond alignment between audio streams and visual displays.</li>
+          <li>Developed Public REST APIs and Java/DynamoDB microservices for 3P merchant integrations across US, EU, and JP. Saved 2 hours/day of operational work through end-to-end workflow automation.</li>
+          <li>Led the code migration of a microservice handling 5M daily requests from plain Java to a document format, achieving 100% unit test coverage and conducting rigorous testing in the gamma environment.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <article class="entry">
+        <div class="entry-header">
+          <h3>University of Wisconsin–Madison — M.S. Information Science</h3>
+          <span class="entry-meta">GPA: 3.83/4.0 · 2023 – 2024</span>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-header">
+          <h3>BITS Pilani — B.E. Computer Science</h3>
+          <span class="entry-meta">GPA: 8.01/10 · 2016 – 2020</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-group">
+        <h4>Languages &amp; Frameworks</h4>
+        <ul class="badges">
+          <li>C++</li><li>Java</li><li>Python</li><li>Go</li><li>SQL</li><li>Spring Boot</li><li>React</li><li>Angular</li><li>R</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h4>Cloud &amp; DevOps</h4>
+        <ul class="badges">
+          <li>AWS Lambda</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Kafka</li><li>CI/CD</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h4>Specialized</h4>
+        <ul class="badges">
+          <li>Low-Latency Infra</li><li>Agentic Workflows</li><li>MCP</li><li>Distributed Systems</li><li>Systems Programming</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
       <h2>Projects</h2>
-      <ul class="projects">
-        <li><a href="https://github.com/bhavishya0007" target="_blank" rel="noopener">GitHub Profile</a></li>
-      </ul>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>trading-engine</h3>
+          <p>Multithreaded limit order book and trading engine for HFT: processes buy/sell/cancel orders with FIFO price-priority matching, achieving ~23,000 executions/sec.</p>
+          <ul class="badges">
+            <li>C++</li><li>Multithreading</li><li>Binary Trees</li>
+          </ul>
+          <a href="https://github.com/bhavishya0007/trading-engine" target="_blank" rel="noopener">Source →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Agentic Financial Research Station</h3>
+          <p>Agentic financial intelligence dashboard that correlates news sentiment with real-time market price movements using an LLM agent over MCP.</p>
+          <ul class="badges">
+            <li>Python</li><li>Gemini 1.5 Flash</li><li>MCP</li><li>Streamlit</li>
+          </ul>
+          <a href="https://github.com/bhavishya0007/Agentic-Financial-Research-Station" target="_blank" rel="noopener">Source →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Market Correlation Lab</h3>
+          <p>Streamlit dashboard analyzing correlation regimes between developed and emerging equity markets (US vs. India) across asset allocation, rates, inflation, and risk factors.</p>
+          <ul class="badges">
+            <li>Python</li><li>Streamlit</li><li>Alpha Vantage MCP</li>
+          </ul>
+          <a href="https://github.com/bhavishya0007/Market-Correlation-Lab" target="_blank" rel="noopener">Source →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>url-shortener</h3>
+          <p>Minimal URL shortener service: embedded Jetty HTTP server, Dagger 2 dependency injection, and counter-based Base62 encoding for short codes.</p>
+          <ul class="badges">
+            <li>Java</li><li>Jetty</li><li>Dagger</li>
+          </ul>
+          <a href="https://github.com/bhavishya0007/Url-Shortner" target="_blank" rel="noopener">Source →</a>
+        </article>
+      </div>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
-      <ul class="contact">
+      <ul class="contact-links">
+        <li><a href="mailto:bkumar5@wisc.edu">bkumar5@wisc.edu</a></li>
+        <li><a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://github.com/bhavishya0007" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </section>

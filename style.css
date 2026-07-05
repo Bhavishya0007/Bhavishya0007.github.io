@@ -1,9 +1,11 @@
 :root {
   --bg: #0d1117;
+  --bg-raised: #161b22;
+  --border: #30363d;
   --fg: #e6edf3;
   --muted: #8b949e;
   --accent: #58a6ff;
-  --max-width: 720px;
+  --max-width: 860px;
 }
 
 * {
@@ -19,7 +21,7 @@ body {
   line-height: 1.6;
 }
 
-header, main, footer {
+header, main, footer, nav {
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -38,6 +40,28 @@ header h1 {
   margin-top: 0.25rem;
 }
 
+nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 section {
   margin: 2.5rem 0;
 }
@@ -47,7 +71,18 @@ h2 {
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
 }
 
 a {
@@ -67,6 +102,92 @@ ul {
 
 ul li {
   margin-bottom: 0.4rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.contact-links li {
+  margin-bottom: 0;
+}
+
+.entry {
+  margin-bottom: 1.75rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.entry-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.entry ul li {
+  margin-bottom: 0.4rem;
+  color: var(--fg);
+}
+
+.skills-group {
+  margin-bottom: 1.25rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badges li {
+  margin-bottom: 0;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--fg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.project-card .badges {
+  margin-bottom: 0.75rem;
 }
 
 footer {
