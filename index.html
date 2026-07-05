@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavishya Kumar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bhavishya Kumar</h1>
+    <p class="tagline">Software Engineer</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>Welcome to my personal site. This is where I share my projects, writing, and things I'm building.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li><a href="https://github.com/bhavishsingh" target="_blank" rel="noopener">GitHub Profile</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li><a href="https://github.com/bhavishsingh" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Bhavishya Kumar</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
