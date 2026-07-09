@@ -4,17 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bhavishya Kumar</title>
+  <meta name="description" content="Bhavishya Kumar · Software Development Engineer building distributed systems and AI-powered tooling.">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // set theme before paint to avoid flash
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
-  <header>
+  <div class="bg-decoration" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="runner-track" aria-hidden="true">
+    <svg class="runner" viewBox="0 0 40 40" width="34" height="34">
+      <circle class="runner-head" cx="20" cy="8" r="4.5" fill="currentColor" />
+      <line class="runner-torso" x1="20" y1="12.5" x2="19" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      <line class="runner-arm runner-arm-back" x1="19" y1="15" x2="12" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+      <line class="runner-arm runner-arm-front" x1="19" y1="15" x2="27" y2="10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+      <line class="runner-leg runner-leg-back" x1="19" y1="25" x2="10" y2="30" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      <line class="runner-leg runner-leg-front" x1="19" y1="25" x2="29" y2="33" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <header class="hero reveal">
+    <div class="hero-top">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme">🌙</button>
+    </div>
+
+    <div class="avatar">BK</div>
     <h1>Bhavishya Kumar</h1>
     <p class="tagline">Software Development Engineer</p>
-    <ul class="contact-links">
-      <li><a href="mailto:bkumar5@wisc.edu">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/bhavishya0007" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+    <p class="location">📍 Seattle, WA</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="assets/Bhavishya_Kumar_CV.pdf" download>⬇ Download Resume</a>
+      <a class="btn" href="mailto:bkumar5@wisc.edu">✉ Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="btn" href="https://github.com/bhavishya0007" target="_blank" rel="noopener">⌥ GitHub</a>
+    </div>
   </header>
 
   <nav>
@@ -27,96 +61,168 @@
   </nav>
 
   <main>
-    <section id="summary">
-      <h2>Summary</h2>
-      <p>Software Engineer with 5+ years of experience building reliable, large-scale distributed systems — from
+    <section id="summary" class="reveal">
+      <div class="section-heading">
+        <span class="section-icon">👋</span>
+        <h2>Summary</h2>
+      </div>
+      <p>Software Engineer with 5+ years of experience building reliable, large-scale distributed systems, from
         governance-as-code automation processing millions of order transitions at Amazon, to low-latency trading
         infrastructure and LLM-powered agentic tools built on the Model Context Protocol. Comfortable across the
         stack (C++, Java, Python, C#/.NET, Go) and across clouds (AWS, Azure), with a track record as a founding
         engineer taking products from zero to one while mentoring engineers on distributed systems fundamentals.</p>
-    </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="card-grid">
-        <article class="entry card">
-          <div class="entry-header">
-            <h3>Amazon — SDE2, Alexa Shopping</h3>
-            <span class="entry-meta">Seattle, WA · Jan 2025 – Present</span>
-          </div>
-          <p class="entry-summary">Building reliable, automated systems and AI-powered tooling that keep large-scale order processing running smoothly.</p>
-        </article>
-
-        <article class="entry card">
-          <div class="entry-header">
-            <h3>Balbix — AI/ML Founding Engineer Intern</h3>
-            <span class="entry-meta">San Jose, CA · Jun 2024 – Aug 2024</span>
-          </div>
-          <p class="entry-summary">Built performance-focused telemetry and AI-powered tooling for a cybersecurity risk assistant product.</p>
-        </article>
-
-        <article class="entry card">
-          <div class="entry-header">
-            <h3>NHBT Securities — Software Engineer</h3>
-            <span class="entry-meta">Mumbai, India · May 2023 – Aug 2023</span>
-          </div>
-          <p class="entry-summary">Modernized and scaled a real-time trading platform's infrastructure and services.</p>
-        </article>
-
-        <article class="entry card">
-          <div class="entry-header">
-            <h3>Amazon — Software Engineer</h3>
-            <span class="entry-meta">Bengaluru, India · Jan 2020 – Nov 2022</span>
-          </div>
-          <p class="entry-summary">Built low-level device software and backend services for Alexa and global merchant integrations.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <article class="entry card">
-        <div class="entry-header">
-          <h3>University of Wisconsin–Madison — M.S. Information Science</h3>
-          <span class="entry-meta">GPA: 3.83/4.0 · 2023 – 2024</span>
+      <div class="quick-facts">
+        <div class="quick-fact">
+          <span class="fact-icon">📍</span>
+          <span><span class="fact-label">Location</span><span class="fact-value">Seattle, WA</span></span>
         </div>
-      </article>
-      <article class="entry card">
-        <div class="entry-header">
-          <h3>BITS Pilani — B.E. Computer Science</h3>
-          <span class="entry-meta">GPA: 8.01/10 · 2016 – 2020</span>
+        <div class="quick-fact">
+          <span class="fact-icon">🧭</span>
+          <span><span class="fact-label">Experience</span><span class="fact-value">5+ years</span></span>
         </div>
-      </article>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-group">
-        <h4>Languages &amp; Frameworks</h4>
-        <ul class="badges">
-          <li>C++</li><li>C#</li><li>Java</li><li>Python</li><li>Go</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML/CSS</li><li>R</li>
-          <li>.NET Core</li><li>ASP.NET</li><li>Spring Boot</li><li>React</li><li>Angular</li><li>GraphQL</li><li>REST APIs</li>
-        </ul>
-      </div>
-      <div class="skills-group">
-        <h4>Cloud &amp; DevOps</h4>
-        <ul class="badges">
-          <li>AWS Lambda</li><li>SQS</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Azure Cosmos DB</li><li>Azure Functions</li><li>Blob Storage</li>
-          <li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Kafka</li><li>CI/CD</li><li>Git</li><li>Postman</li><li>BigQuery</li>
-        </ul>
-      </div>
-      <div class="skills-group">
-        <h4>Specialized</h4>
-        <ul class="badges">
-          <li>Low-Latency Infra</li><li>Distributed Systems</li><li>System Design &amp; Architecture</li><li>Agentic Workflows</li>
-          <li>MCP</li><li>LLM Integration (GPT-4, Gemini)</li><li>Systems Programming</li><li>Performance Optimization</li><li>Agile Methodologies</li>
-        </ul>
+        <div class="quick-fact">
+          <span class="fact-icon">🎯</span>
+          <span><span class="fact-label">Focus</span><span class="fact-value">Distributed Systems &amp; AI Tooling</span></span>
+        </div>
+        <div class="quick-fact">
+          <span class="fact-icon">🎓</span>
+          <span><span class="fact-label">Education</span><span class="fact-value">M.S., UW&ndash;Madison</span></span>
+        </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="experience" class="reveal">
+      <div class="split">
+        <div class="section-heading">
+          <span class="section-icon">💼</span>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>Amazon · SDE2, Alexa Shopping</h3>
+              <span class="entry-meta">Seattle, WA · Jan 2025 – Present</span>
+            </div>
+            <p class="entry-summary">Building reliable, automated systems and AI-powered tooling that keep large-scale order processing running smoothly.</p>
+          </article>
+
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>Balbix · AI/ML Founding Engineer Intern</h3>
+              <span class="entry-meta">San Jose, CA · Jun 2024 – Aug 2024</span>
+            </div>
+            <p class="entry-summary">Built performance-focused telemetry and AI-powered tooling for a cybersecurity risk assistant product.</p>
+          </article>
+
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>NHBT Securities · Software Engineer</h3>
+              <span class="entry-meta">Mumbai, India · May 2023 – Aug 2023</span>
+            </div>
+            <p class="entry-summary">Modernized and scaled a real-time trading platform's infrastructure and services.</p>
+          </article>
+
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>Amazon · Software Engineer</h3>
+              <span class="entry-meta">Bengaluru, India · Jan 2020 – Nov 2022</span>
+            </div>
+            <p class="entry-summary">Built low-level device software and backend services for Alexa and global merchant integrations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="reveal">
+      <div class="split">
+        <div class="section-heading">
+          <span class="section-icon">🎓</span>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>University of Wisconsin–Madison · M.S. Information Science</h3>
+              <span class="entry-meta">GPA: 3.83/4.0 · 2023 – 2024</span>
+            </div>
+          </article>
+          <article class="entry timeline-item">
+            <div class="entry-header">
+              <h3>BITS Pilani · B.E. Computer Science</h3>
+              <span class="entry-meta">GPA: 8.01/10 · 2016 – 2020</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="split">
+        <div class="section-heading">
+          <span class="section-icon">🛠️</span>
+          <h2>Skills</h2>
+        </div>
+        <div>
+          <div class="skills-group">
+            <h4>💻 Core Languages</h4>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-head"><span>C++</span><span class="skill-level">Expert</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-head"><span>Python</span><span class="skill-level">Expert</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-head"><span>Go</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-head"><span>Java</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-head"><span>C# / .NET</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+              </div>
+            </div>
+            <p class="skill-note">Levels are self-assessed estimates &mdash; adjust freely.</p>
+          </div>
+
+          <div class="skills-group">
+            <h4>🧩 Also with</h4>
+            <ul class="badges">
+              <li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML/CSS</li><li>R</li>
+              <li>.NET Core</li><li>ASP.NET</li><li>Spring Boot</li><li>React</li><li>Angular</li><li>GraphQL</li><li>REST APIs</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h4>☁️ Cloud &amp; DevOps</h4>
+            <ul class="badges">
+              <li>AWS Lambda</li><li>SQS</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Azure Cosmos DB</li><li>Azure Functions</li><li>Blob Storage</li>
+              <li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Kafka</li><li>CI/CD</li><li>Git</li><li>Postman</li><li>BigQuery</li>
+            </ul>
+          </div>
+          <div class="skills-group specialized">
+            <h4>✨ Specialized</h4>
+            <ul class="badges">
+              <li>Low-Latency Infra</li><li>Distributed Systems</li><li>System Design &amp; Architecture</li><li>Agentic Workflows</li>
+              <li>MCP</li><li>LLM Integration (GPT-4, Gemini)</li><li>Systems Programming</li><li>Performance Optimization</li><li>Agile Methodologies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="section-heading">
+        <span class="section-icon">🚀</span>
+        <h2>Projects</h2>
+      </div>
       <div class="card-grid">
         <article class="project-card card">
           <h3>trading-engine</h3>
@@ -164,8 +270,11 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
+    <section id="contact" class="reveal">
+      <div class="section-heading">
+        <span class="section-icon">📬</span>
+        <h2>Contact</h2>
+      </div>
       <ul class="contact-links">
         <li><a href="mailto:bkumar5@wisc.edu">bkumar5@wisc.edu</a></li>
         <li><a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -178,8 +287,6 @@
     <p>&copy; <span id="year"></span> Bhavishya Kumar</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
