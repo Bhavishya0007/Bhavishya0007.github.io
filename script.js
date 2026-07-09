@@ -1,21 +1,5 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// theme toggle
-var toggleBtn = document.getElementById("theme-toggle");
-var root = document.documentElement;
-
-function syncToggleIcon() {
-  toggleBtn.textContent = root.getAttribute("data-theme") === "light" ? "☀️" : "🌙";
-}
-syncToggleIcon();
-
-toggleBtn.addEventListener("click", function () {
-  var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-  syncToggleIcon();
-});
-
 // scroll reveal
 function fillSkillBars(container) {
   var fills = container.querySelectorAll(".skill-fill");

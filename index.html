@@ -6,98 +6,90 @@
   <title>Bhavishya Kumar</title>
   <meta name="description" content="Bhavishya Kumar · Software Development Engineer building distributed systems and AI-powered tooling.">
   <link rel="stylesheet" href="style.css">
-  <script>
-    // set theme before paint to avoid flash
-    (function () {
-      var saved = localStorage.getItem("theme");
-      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-      document.documentElement.setAttribute("data-theme", theme);
-    })();
-  </script>
 </head>
 <body>
-  <div class="bg-decoration" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+  <div class="terminal-bar">
+    <div class="terminal-bar-inner">
+      <div class="terminal-brand">
+        <span class="terminal-dots" aria-hidden="true">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+        </span>
+        <span class="terminal-path">bhavishya@portfolio:~$</span>
+      </div>
+      <nav>
+        <a href="#summary"><span class="nav-num">01.</span> Summary</a>
+        <a href="#experience"><span class="nav-num">02.</span> Experience</a>
+        <a href="#education"><span class="nav-num">03.</span> Education</a>
+        <a href="#skills"><span class="nav-num">04.</span> Skills</a>
+        <a href="#projects"><span class="nav-num">05.</span> Projects</a>
+        <a href="#contact"><span class="nav-num">06.</span> Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-resume" href="assets/Bhavishya_Kumar_CV.pdf" download>Resume</a>
+    </div>
   </div>
 
-  <div class="runner-track" aria-hidden="true">
-    <svg class="runner" viewBox="0 0 40 40" width="34" height="34">
-      <circle class="runner-head" cx="20" cy="8" r="4.5" fill="currentColor" />
-      <line class="runner-torso" x1="20" y1="12.5" x2="19" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-      <line class="runner-arm runner-arm-back" x1="19" y1="15" x2="12" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      <line class="runner-arm runner-arm-front" x1="19" y1="15" x2="27" y2="10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      <line class="runner-leg runner-leg-back" x1="19" y1="25" x2="10" y2="30" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-      <line class="runner-leg runner-leg-front" x1="19" y1="25" x2="29" y2="33" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-    </svg>
-  </div>
+  <aside class="side-rail side-rail-left" aria-hidden="true">
+    <a href="mailto:bkumar5@wisc.edu" aria-label="Email" title="Email">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://github.com/bhavishya0007" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    </a>
+  </aside>
 
-  <header class="hero reveal">
-    <div class="hero-top">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme">🌙</button>
-    </div>
-
-    <div class="avatar">BK</div>
-    <h1>Bhavishya Kumar</h1>
-    <p class="tagline">Software Development Engineer</p>
-    <p class="location">📍 Seattle, WA</p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="assets/Bhavishya_Kumar_CV.pdf" download>⬇ Download Resume</a>
-      <a class="btn" href="mailto:bkumar5@wisc.edu">✉ Email</a>
-      <a class="btn" href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">in LinkedIn</a>
-      <a class="btn" href="https://github.com/bhavishya0007" target="_blank" rel="noopener">⌥ GitHub</a>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#summary">Summary</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <aside class="side-rail side-rail-right" aria-hidden="true">
+    <span class="side-rail-email">bkumar5@wisc.edu</span>
+  </aside>
 
   <main>
-    <section id="summary" class="reveal">
-      <div class="section-heading">
-        <span class="section-icon">👋</span>
-        <h2>Summary</h2>
+    <header class="hero reveal">
+      <p class="hero-eyebrow">Hi, my name is</p>
+      <h1>Bhavishya Kumar<span class="cursor">_</span></h1>
+      <p class="hero-tagline">I build distributed systems.</p>
+      <p class="hero-desc">Software Engineer with 5+ years of experience building reliable, large-scale distributed
+        systems, from governance-as-code automation at Amazon to low-latency trading infrastructure and
+        LLM-powered agentic tools. Currently based in Seattle, WA.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="assets/Bhavishya_Kumar_CV.pdf" download>Download Resume</a>
+        <a class="btn" href="#projects">View Projects</a>
       </div>
-      <p>Software Engineer with 5+ years of experience building reliable, large-scale distributed systems, from
-        governance-as-code automation processing millions of order transitions at Amazon, to low-latency trading
-        infrastructure and LLM-powered agentic tools built on the Model Context Protocol. Comfortable across the
-        stack (C++, Java, Python, C#/.NET, Go) and across clouds (AWS, Azure), with a track record as a founding
-        engineer taking products from zero to one while mentoring engineers on distributed systems fundamentals.</p>
+    </header>
 
-      <div class="quick-facts">
-        <div class="quick-fact">
-          <span class="fact-icon">📍</span>
-          <span><span class="fact-label">Location</span><span class="fact-value">Seattle, WA</span></span>
-        </div>
-        <div class="quick-fact">
-          <span class="fact-icon">🧭</span>
-          <span><span class="fact-label">Experience</span><span class="fact-value">5+ years</span></span>
-        </div>
-        <div class="quick-fact">
-          <span class="fact-icon">🎯</span>
-          <span><span class="fact-label">Focus</span><span class="fact-value">Distributed Systems &amp; AI Tooling</span></span>
-        </div>
-        <div class="quick-fact">
-          <span class="fact-icon">🎓</span>
-          <span><span class="fact-label">Education</span><span class="fact-value">M.S., UW&ndash;Madison</span></span>
+    <section id="summary" class="reveal">
+      <div class="section-heading-num"><span class="section-num">01.</span><h2>Summary</h2></div>
+      <div class="about-grid">
+        <p>Comfortable across the stack (C++, Java, Python, C#/.NET, Go) and across clouds (AWS, Azure), with a
+          track record as a founding engineer taking products from zero to one while mentoring engineers on
+          distributed systems fundamentals. Currently building agentic tooling on the Model Context Protocol
+          at Amazon.</p>
+        <div class="mini-terminal">
+          <div class="mini-terminal-bar">
+            <span class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></span>
+            <span>about.sh</span>
+          </div>
+          <div class="mini-terminal-body">
+            <p><span class="prompt">$</span> cat about.json</p>
+            <p class="out">{</p>
+            <p class="out">&nbsp;&nbsp;"location": "Seattle, WA",</p>
+            <p class="out">&nbsp;&nbsp;"experience": "5+ years",</p>
+            <p class="out">&nbsp;&nbsp;"focus": "Distributed Systems</p>
+            <p class="out">&nbsp;&nbsp;&nbsp;&nbsp;+ AI Tooling",</p>
+            <p class="out">&nbsp;&nbsp;"education": "M.S., UW-Madison"</p>
+            <p class="out">}</p>
+            <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="experience" class="reveal">
       <div class="split">
-        <div class="section-heading">
-          <span class="section-icon">💼</span>
-          <h2>Experience</h2>
-        </div>
+        <div class="section-heading-num"><span class="section-num">02.</span><h2>Experience</h2></div>
 
         <div class="timeline">
           <article class="entry timeline-item">
@@ -105,7 +97,7 @@
               <h3>Amazon · SDE2, Alexa Shopping</h3>
               <span class="entry-meta">Seattle, WA · Jan 2025 – Present</span>
             </div>
-            <p class="entry-summary">Building reliable, automated systems and AI-powered tooling that keep large-scale order processing running smoothly.</p>
+            <p class="entry-summary"><span class="arrow">▹</span> Building reliable, automated systems and AI-powered tooling that keep large-scale order processing running smoothly.</p>
           </article>
 
           <article class="entry timeline-item">
@@ -113,7 +105,7 @@
               <h3>Balbix · AI/ML Founding Engineer Intern</h3>
               <span class="entry-meta">San Jose, CA · Jun 2024 – Aug 2024</span>
             </div>
-            <p class="entry-summary">Built performance-focused telemetry and AI-powered tooling for a cybersecurity risk assistant product.</p>
+            <p class="entry-summary"><span class="arrow">▹</span> Built performance-focused telemetry and AI-powered tooling for a cybersecurity risk assistant product.</p>
           </article>
 
           <article class="entry timeline-item">
@@ -121,7 +113,7 @@
               <h3>NHBT Securities · Software Engineer</h3>
               <span class="entry-meta">Mumbai, India · May 2023 – Aug 2023</span>
             </div>
-            <p class="entry-summary">Modernized and scaled a real-time trading platform's infrastructure and services.</p>
+            <p class="entry-summary"><span class="arrow">▹</span> Modernized and scaled a real-time trading platform's infrastructure and services.</p>
           </article>
 
           <article class="entry timeline-item">
@@ -129,7 +121,7 @@
               <h3>Amazon · Software Engineer</h3>
               <span class="entry-meta">Bengaluru, India · Jan 2020 – Nov 2022</span>
             </div>
-            <p class="entry-summary">Built low-level device software and backend services for Alexa and global merchant integrations.</p>
+            <p class="entry-summary"><span class="arrow">▹</span> Built low-level device software and backend services for Alexa and global merchant integrations.</p>
           </article>
         </div>
       </div>
@@ -137,10 +129,7 @@
 
     <section id="education" class="reveal">
       <div class="split">
-        <div class="section-heading">
-          <span class="section-icon">🎓</span>
-          <h2>Education</h2>
-        </div>
+        <div class="section-heading-num"><span class="section-num">03.</span><h2>Education</h2></div>
         <div class="timeline">
           <article class="entry timeline-item">
             <div class="entry-header">
@@ -160,13 +149,10 @@
 
     <section id="skills" class="reveal">
       <div class="split">
-        <div class="section-heading">
-          <span class="section-icon">🛠️</span>
-          <h2>Skills</h2>
-        </div>
+        <div class="section-heading-num"><span class="section-num">04.</span><h2>Skills</h2></div>
         <div>
           <div class="skills-group">
-            <h4>💻 Core Languages</h4>
+            <h4>Core Languages</h4>
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <div class="skill-bar-head"><span>C++</span><span class="skill-level">Expert</span></div>
@@ -193,7 +179,7 @@
           </div>
 
           <div class="skills-group">
-            <h4>🧩 Also with</h4>
+            <h4>Also with</h4>
             <ul class="badges">
               <li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML/CSS</li><li>R</li>
               <li>.NET Core</li><li>ASP.NET</li><li>Spring Boot</li><li>React</li><li>Angular</li><li>GraphQL</li><li>REST APIs</li>
@@ -201,14 +187,14 @@
           </div>
 
           <div class="skills-group">
-            <h4>☁️ Cloud &amp; DevOps</h4>
+            <h4>Cloud &amp; DevOps</h4>
             <ul class="badges">
               <li>AWS Lambda</li><li>SQS</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Azure Cosmos DB</li><li>Azure Functions</li><li>Blob Storage</li>
               <li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Kafka</li><li>CI/CD</li><li>Git</li><li>Postman</li><li>BigQuery</li>
             </ul>
           </div>
           <div class="skills-group specialized">
-            <h4>✨ Specialized</h4>
+            <h4>Specialized</h4>
             <ul class="badges">
               <li>Low-Latency Infra</li><li>Distributed Systems</li><li>System Design &amp; Architecture</li><li>Agentic Workflows</li>
               <li>MCP</li><li>LLM Integration (GPT-4, Gemini)</li><li>Systems Programming</li><li>Performance Optimization</li><li>Agile Methodologies</li>
@@ -219,51 +205,89 @@
     </section>
 
     <section id="projects" class="reveal">
-      <div class="section-heading">
-        <span class="section-icon">🚀</span>
-        <h2>Projects</h2>
-      </div>
-      <div class="card-grid">
-        <article class="project-card card">
-          <h3>trading-engine</h3>
-          <p>Multithreaded limit order book and trading engine for HFT: processes buy/sell/cancel orders with FIFO price-priority matching, achieving ~23,000 executions/sec.</p>
-          <ul class="badges">
-            <li>C++</li><li>Multithreading</li><li>Binary Trees</li>
+      <div class="section-heading-num"><span class="section-num">05.</span><h2>Projects</h2></div>
+
+      <div class="card-grid featured-grid">
+        <article class="project-card card has-image">
+          <div class="project-thumb"><img src="assets/projects/NovaRetrieve.png" alt="NovaRetrieve screenshot" loading="lazy"></div>
+          <div class="project-card-head">
+            <h3>NovaRetrieve</h3>
+            <a href="https://github.com/Bhavishya0007/NovaRetrieve" target="_blank" rel="noopener" aria-label="Source on GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+          <p>High-velocity RAG engine for sub-second document Q&amp;A: FAISS vector search over Gemini embeddings, LangChain orchestration, and pypdf parsing for grounded answers over any PDF.</p>
+          <ul class="badges tech-tags">
+            <li>Python</li><li>Gemini 3 Flash</li><li>FAISS</li><li>LangChain</li>
           </ul>
-          <a href="https://github.com/bhavishya0007/trading-engine" target="_blank" rel="noopener">Source →</a>
         </article>
 
-        <article class="project-card card">
-          <h3>Agentic Financial Research Station</h3>
+        <article class="project-card card has-image">
+          <div class="project-thumb"><img src="assets/projects/Agentic-Financial-Research-Station1.png" alt="Agentic Financial Research Station screenshot" loading="lazy"></div>
+          <div class="project-card-head">
+            <h3>Agentic Financial Research Station</h3>
+            <a href="https://github.com/bhavishya0007/Agentic-Financial-Research-Station" target="_blank" rel="noopener" aria-label="Source on GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
           <p>Agentic financial intelligence dashboard that correlates news sentiment with real-time market price movements using an LLM agent over MCP.</p>
-          <ul class="badges">
+          <ul class="badges tech-tags">
             <li>Python</li><li>Gemini 1.5 Flash</li><li>MCP</li><li>Streamlit</li>
           </ul>
-          <a href="https://github.com/bhavishya0007/Agentic-Financial-Research-Station" target="_blank" rel="noopener">Source →</a>
         </article>
 
-        <article class="project-card card">
-          <h3>Market Correlation Lab</h3>
+        <article class="project-card card has-image">
+          <div class="project-thumb"><img src="assets/projects/Market-Correlation-Lab.png" alt="Market Correlation Lab screenshot" loading="lazy"></div>
+          <div class="project-card-head">
+            <h3>Market Correlation Lab</h3>
+            <a href="https://github.com/bhavishya0007/Market-Correlation-Lab" target="_blank" rel="noopener" aria-label="Source on GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
           <p>Streamlit dashboard analyzing correlation regimes between developed and emerging equity markets (US vs. India) across asset allocation, rates, inflation, and risk factors.</p>
-          <ul class="badges">
+          <ul class="badges tech-tags">
             <li>Python</li><li>Streamlit</li><li>Alpha Vantage MCP</li>
           </ul>
-          <a href="https://github.com/bhavishya0007/Market-Correlation-Lab" target="_blank" rel="noopener">Source →</a>
+        </article>
+      </div>
+
+      <h3 class="other-projects-heading">Other Noteworthy Projects</h3>
+      <div class="card-grid">
+        <article class="project-card card">
+          <div class="project-card-head">
+            <svg class="folder-icon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <a href="https://github.com/bhavishya0007/trading-engine" target="_blank" rel="noopener" aria-label="Source on GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+          <h3>trading-engine</h3>
+          <p>Multithreaded limit order book and trading engine for HFT: processes buy/sell/cancel orders with FIFO price-priority matching, achieving ~23,000 executions/sec.</p>
+          <ul class="badges tech-tags">
+            <li>C++</li><li>Multithreading</li><li>Binary Trees</li>
+          </ul>
         </article>
 
         <article class="project-card card">
+          <div class="project-card-head">
+            <svg class="folder-icon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <a href="https://github.com/bhavishya0007/Url-Shortner" target="_blank" rel="noopener" aria-label="Source on GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
           <h3>url-shortener</h3>
           <p>Minimal URL shortener service: embedded Jetty HTTP server, Dagger 2 dependency injection, and counter-based Base62 encoding for short codes.</p>
-          <ul class="badges">
+          <ul class="badges tech-tags">
             <li>Java</li><li>Jetty</li><li>Dagger</li>
           </ul>
-          <a href="https://github.com/bhavishya0007/Url-Shortner" target="_blank" rel="noopener">Source →</a>
         </article>
 
         <article class="project-card card">
+          <div class="project-card-head">
+            <svg class="folder-icon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
           <h3>Distributed Software Systems</h3>
           <p>High-availability ordering platform on Azure using a microservices approach with .NET and GraphQL; data layer built on Cosmos DB (Gremlin API) and Blob Storage, with auto-scaling and load-balanced VMs for resilience.</p>
-          <ul class="badges">
+          <ul class="badges tech-tags">
             <li>.NET</li><li>GraphQL</li><li>Azure Cosmos DB</li><li>Blob Storage</li>
           </ul>
         </article>
@@ -271,11 +295,10 @@
     </section>
 
     <section id="contact" class="reveal">
-      <div class="section-heading">
-        <span class="section-icon">📬</span>
-        <h2>Contact</h2>
-      </div>
-      <ul class="contact-links">
+      <div class="section-heading-num"><span class="section-num">06.</span><h2>Contact</h2></div>
+      <p class="contact-blurb">Currently open to interesting conversations about distributed systems, AI tooling, or anything in between. My inbox is always open.</p>
+      <a class="btn btn-primary" href="mailto:bkumar5@wisc.edu">Say Hello</a>
+      <ul class="contact-links contact-links-mobile">
         <li><a href="mailto:bkumar5@wisc.edu">bkumar5@wisc.edu</a></li>
         <li><a href="https://www.linkedin.com/in/bhavishya-kumar-144a06191" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://github.com/bhavishya0007" target="_blank" rel="noopener">GitHub</a></li>
@@ -284,7 +307,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Bhavishya Kumar</p>
+    <p><span class="prompt">$</span> echo "Built by Bhavishya Kumar, <span id="year"></span>"</p>
   </footer>
 
   <script src="script.js"></script>
