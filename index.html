@@ -48,15 +48,88 @@
 
   <main>
     <header class="hero reveal">
-      <p class="hero-eyebrow">Hi, my name is</p>
-      <h1>Bhavishya Kumar<span class="cursor">_</span></h1>
-      <p class="hero-tagline">I build distributed systems.</p>
-      <p class="hero-desc">Software Engineer with 5+ years of experience building reliable, large-scale distributed
-        systems, from governance-as-code automation at Amazon to low-latency trading infrastructure and
-        LLM-powered agentic tools. Currently based in Seattle, WA.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="assets/Bhavishya_Kumar_CV.pdf" download>Download Resume</a>
-        <a class="btn" href="#projects">View Projects</a>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Hi, my name is</p>
+        <h1>Bhavishya Kumar<span class="cursor">_</span></h1>
+        <p class="hero-tagline">I build distributed systems.</p>
+        <p class="hero-desc">Software Engineer with 5+ years of experience building reliable, large-scale distributed
+          systems, from governance-as-code automation at Amazon to low-latency trading infrastructure and
+          LLM-powered agentic tools. Currently based in Seattle, WA.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="assets/Bhavishya_Kumar_CV.pdf" download>Download Resume</a>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mini-terminal-bar">
+          <span class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></span>
+          <span>agent.py</span>
+        </div>
+        <svg id="agent-loop" viewBox="0 0 520 440" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+              <stop class="stop-accent" offset="0%" stop-opacity="0.55"/>
+              <stop class="stop-accent" offset="100%" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="hubFill" cx="35%" cy="30%" r="75%">
+              <stop class="stop-hub-light" offset="0%"/>
+              <stop class="stop-accent" offset="55%"/>
+              <stop class="stop-hub-dark" offset="100%"/>
+            </radialGradient>
+          </defs>
+
+          <circle class="hub-halo" cx="260" cy="220" r="95" fill="url(#hubGlow)"/>
+
+          <circle class="orbit orbit-a" cx="260" cy="220" r="120"/>
+          <circle class="orbit orbit-b" cx="260" cy="220" r="165"/>
+
+          <path class="loop-path" d="M260,55 L402.9,137.5 L402.9,302.5 L260,385 L117.1,302.5 L117.1,137.5 Z"/>
+
+          <line class="spoke" x1="260" y1="220" x2="260" y2="55" style="animation-delay:0s"/>
+          <line class="spoke" x1="260" y1="220" x2="402.9" y2="137.5" style="animation-delay:-0.6s"/>
+          <line class="spoke" x1="260" y1="220" x2="402.9" y2="302.5" style="animation-delay:-1.2s"/>
+          <line class="spoke" x1="260" y1="220" x2="260" y2="385" style="animation-delay:-1.8s"/>
+          <line class="spoke" x1="260" y1="220" x2="117.1" y2="302.5" style="animation-delay:-2.4s"/>
+          <line class="spoke" x1="260" y1="220" x2="117.1" y2="137.5" style="animation-delay:-3s"/>
+
+          <g class="satellite" transform="translate(260,55)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Plan</text>
+          </g>
+          <g class="satellite satellite-highlight" transform="translate(402.9,137.5)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Reason</text>
+          </g>
+          <g class="satellite" transform="translate(402.9,302.5)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Tools</text>
+          </g>
+          <g class="satellite" transform="translate(260,385)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Act</text>
+          </g>
+          <g class="satellite" transform="translate(117.1,302.5)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Reflect</text>
+          </g>
+          <g class="satellite" transform="translate(117.1,137.5)">
+            <rect x="-46" y="-17" width="92" height="34" rx="8"/>
+            <circle class="satellite-dot" cx="-30" cy="0" r="3"/>
+            <text x="-18" y="1">Retrieve</text>
+          </g>
+
+          <g class="hub">
+            <circle cx="260" cy="220" r="46" fill="url(#hubFill)"/>
+            <circle class="hub-ring" cx="260" cy="220" r="46" fill="none"/>
+            <path class="hub-spark" d="M260,196 L264,214 L282,220 L264,226 L260,244 L256,226 L238,220 L256,214 Z"/>
+            <text class="hub-label" x="260" y="266">Agent</text>
+          </g>
+        </svg>
       </div>
     </header>
 

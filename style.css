@@ -6,8 +6,8 @@
   --fg: #d8dee9;
   --muted: #6b7688;
   --accent: #e8a33d;
-  --max-width: 1100px;
-  --content-width: 780px;
+  --max-width: 1300px;
+  --content-width: 1300px;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   --mono: "SF Mono", "Fira Code", "JetBrains Mono", Menlo, Consolas, "Courier New", monospace;
 }
@@ -205,7 +205,160 @@ nav a.active {
 /* ---------- hero ---------- */
 
 .hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2.5rem;
   padding: 5.5rem 0 3rem;
+}
+
+@media (min-width: 1140px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 500px;
+  }
+}
+
+.hero-visual {
+  display: none;
+}
+
+@media (min-width: 1140px) {
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+}
+
+.hero-visual .mini-terminal-bar {
+  flex-shrink: 0;
+}
+
+#agent-loop {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#agent-loop .stop-accent { stop-color: var(--accent); }
+#agent-loop .stop-hub-light { stop-color: #f5c977; }
+#agent-loop .stop-hub-dark { stop-color: #b9791f; }
+
+#agent-loop .orbit {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 1 7;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#agent-loop .orbit-a { animation: agent-orbit-spin 50s linear infinite; }
+#agent-loop .orbit-b { animation: agent-orbit-spin 80s linear infinite reverse; opacity: 0.6; }
+
+#agent-loop .hub-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: agent-hub-pulse 3.2s ease-in-out infinite;
+}
+
+#agent-loop .loop-path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-opacity: 0.35;
+  stroke-width: 1;
+  stroke-dasharray: 5 7;
+  animation: agent-dash-flow 16s linear infinite;
+}
+
+#agent-loop .spoke {
+  stroke: var(--fg);
+  stroke-opacity: 0.2;
+  stroke-width: 1;
+  stroke-dasharray: 3 6;
+  animation: agent-dash-flow-short 3.2s linear infinite;
+}
+
+#agent-loop .satellite rect {
+  fill: var(--bg-raised-2);
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+#agent-loop .satellite-highlight rect {
+  stroke: var(--accent);
+  stroke-opacity: 0.6;
+}
+
+#agent-loop .satellite-dot {
+  fill: var(--muted);
+}
+
+#agent-loop .satellite-highlight .satellite-dot {
+  fill: var(--accent);
+}
+
+#agent-loop .satellite text {
+  font-family: var(--mono);
+  font-size: 13px;
+  fill: var(--fg);
+  dominant-baseline: middle;
+}
+
+#agent-loop .satellite-highlight text {
+  fill: var(--accent);
+}
+
+#agent-loop .hub-ring {
+  stroke: var(--accent);
+  stroke-opacity: 0.7;
+  stroke-width: 1.5;
+}
+
+#agent-loop .hub-spark {
+  fill: var(--bg-raised);
+}
+
+#agent-loop .hub-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--accent);
+  text-anchor: middle;
+}
+
+@keyframes agent-orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes agent-hub-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+}
+
+@keyframes agent-dash-flow {
+  to { stroke-dashoffset: -144; }
+}
+
+@keyframes agent-dash-flow-short {
+  to { stroke-dashoffset: -36; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #agent-loop .orbit-a,
+  #agent-loop .orbit-b,
+  #agent-loop .hub-halo,
+  #agent-loop .loop-path,
+  #agent-loop .spoke {
+    animation: none;
+  }
 }
 
 .hero-eyebrow {
